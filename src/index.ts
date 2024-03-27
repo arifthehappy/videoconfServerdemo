@@ -28,7 +28,6 @@ app.use((_req, res, next) => {
 
   next();
 });
-app.use(cors);
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
@@ -36,6 +35,11 @@ const io = new Server(httpServer, {
     methods: ["GET", "POST"],
   },
 });
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST'],
+}));
+
 
 //get root and send hello
 app.get("/", (req, res) => {
