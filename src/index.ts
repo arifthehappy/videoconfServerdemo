@@ -4,7 +4,7 @@ import { Server } from "socket.io";
 import cors from "cors";
 import { roomHandler } from "./room";
 
-const port = 8000 || process.env.PORT;
+const port = 10000 || process.env.PORT;
 const app = express();
 
 // Set middleware of CORS 
