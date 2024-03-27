@@ -15,6 +15,12 @@ const io = new Server(httpServer, {
   },
 });
 
+//get root and send hello
+app.get("/", (req, res) => {
+  res.send("Hello from server");
+})
+
+
 io.on("connection", (socket) => {
   console.log("a user connected", socket.id);
   roomHandler(socket);
