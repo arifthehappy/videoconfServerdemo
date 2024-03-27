@@ -11,7 +11,7 @@ const app = express();
 app.use((_req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://your-frontend.com"
+    "*"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
